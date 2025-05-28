@@ -71,7 +71,7 @@ Create your database (Mongodb)
     ruff check . --fix          # Fixes issues Ruff can auto-correct
 
 TO Test Pre commit config file => (.pre-commit-config-yaml)
-    ```bash
+```bash
     pre-commit clean
     pre-commit install
     pre-commit run --all-files
