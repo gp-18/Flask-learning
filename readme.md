@@ -75,3 +75,8 @@ TO Test Pre commit config file => (.pre-commit-config-yaml)
     pre-commit clean
     pre-commit install
     pre-commit run --all-files
+```
+WANT TO MAKE COMMIT BYPASSING THE COMMIT CONFIG FILE 
+```bash 
+    git commit -m "commit message" --no-verify
+```
