@@ -1,0 +1,22 @@
+[tool.black]
+line-length = 88
+target-version = ["py311"]
+exclude = '''
+/(
+    venv
+  | migrations
+)/
+'''
+
+[tool.isort]
+profile = "black"
+line_length = 88
+skip = ["venv", "migrations"]
+
+[tool.ruff]
+line-length = 88
+exclude = ["venv", "migrations"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"

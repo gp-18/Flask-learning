@@ -1,0 +1,101 @@
+FLASK
+WSGI stands for Web Server Gateway Interface.
+It is a specification (or interface) that defines how a web server communicates with Python web applications or frameworks (like Django, Flask, etc).
+Here's a simple visualization of how WSGI works:
+          🌐 Browser / Client
+                  │
+                  ▼
+           📡 Web Server (e.g., Nginx)
+                  │
+                  ▼
+       🐍 WSGI Server (e.g., Gunicorn, uWSGI)
+                  │
+                  ▼
+        🧠 Your Python App (Flask or Django)
+                  │
+                  ▼
+           📦 Response is generated
+                  │
+                  ▼
+       🔁 Back through WSGI → Web Server → Browser
+       
+What is Flask, and why was it created?
+Flask is a lightweight, minimalist, and flexible web framework for Python.
+It was created by Armin Ronacher in 2010.
+Main Aim Behind Flask:
+To give developers freedom and simplicity to build web applications the way they want, without being forced into a strict structure.
+
+So… Why use Flask if Django already exists?
+Here’s when Flask shines:
+Building REST APIs quickly without all the extras Django comes with
+You want full control over architecture, libraries, and structure
+You're working on a microservice or a single-purpose API
+You’re learning backend dev and want to understand the fundamentals
+You want a lightweight app with faster boot time
+
+Django is like:
+A pre-built smart city — roads, lights, hospitals, everything is there. Just move in and start.
+Flask is like:
+A blank plot of land — bring your own tools and build exactly what you want.
+
+Summary
+Both are WSGI frameworks, but Flask was created for freedom, modularity, and minimalism.
+Use Django if you need built-in features and rapid dev for big apps.
+Use Flask if you want a lightweight, flexible API or service, or to learn the internals of web development.
+
+setup steps for flask
+python3 -m venv venv  
+source venv/bin/activate 
+pip install flask 
+flask run 
+if you dont want that you need to close the server and then again start the server when you made some changes then use : flask run --debug
+Every time we run a python code the __pycache__ file is created so to not to create __pycache__ file we need to do : export PYTHONDONTWRITEBYTECODE=1
+The __pycache__ directory is created by Python to store compiled bytecode versions of your .py files. Here's why:
+
+Why __pycache__ is created:
+When you run a Python script:
+Python compiles the .py files into bytecode (which is a lower-level, platform-independent representation of the source code).
+This bytecode is saved in __pycache__ with a filename like module_name.cpython-<version>.pyc.
+For example: example.cpython-39.pyc for Python 3.9.
+Faster execution: Next time you run the script, Python will reuse the .pyc file instead of recompiling the .py file — which speeds up startup time.
+Version-specific: The .pyc files are named with the Python version to avoid compatibility issues between different Python versions.
+creating the folder for the controllers and registering it in the app.py
+inside the controller folder adding the _init_.py file and adding the loop code inside it so that we dont have to manually add the files inside it
+
+mysql connection
+writing the raw query and using the sql connector to fire the query
+crud apis with json response and status code
+cors handling
+pagination
+
+🧠 What is pyproject.toml?
+Think of your Python project like a LEGO city 🏙️. You have many blocks:
+
+🚪 app.py: Your house or main door
+
+🔌 db_connection.py: Connects wires to power (database)
+
+📦 venv: Your box of tools and pieces
+
+🧹 Ruff or Black: Robots that clean and fix your messy LEGO builds
+
+But… the robots need instructions. That's what pyproject.toml is:
+
+📝 A note that tells your cleaning robots (Ruff, Black, etc.) how you want things cleaned and built.
+
+It's like saying:
+
+"Please use double doors (double quotes)"
+
+"Make roads (lines) not longer than 88 studs (characters)"
+
+"Don't go into the messy attic (ignore folders like venv)"
+
+🤖 Why is it so helpful?
+Without it, you'd have to yell rules every time:
+
+"Hey Ruff! Line length is 88! And ignore this file!"
+
+With pyproject.toml, you write the rules once, and every tool follows them.
+
+

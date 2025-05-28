@@ -1,0 +1,54 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+ENV/
+env/
+.venv/
+
+# Environment variable files
+.env
+
+# Flask cache and logs
+instance/
+*.log
+*.pid
+
+# Pytest cache
+.pytest_cache/
+
+# VS Code settings
+.vscode/
+
+# macOS system files
+.DS_Store
+
+# Ruff or other formatter/linter caches
+.ruff_cache/
+.mypy_cache/
+
+# Coverage reports
+htmlcov/
+.coverage
+coverage.xml
+*.cover
+
+# Database files
+*.sqlite3
+*.db
+
+# PyInstaller
+build/
+dist/
+*.spec
+
+# IDE folders
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
