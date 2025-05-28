@@ -75,3 +75,9 @@ TO Test Pre commit config file => (.pre-commit-config-yaml)
     pre-commit clean
     pre-commit install
     pre-commit run --all-files
+```
+
+If you want to make a commit without running the pre-commit hooks (bypassing checks), use:
+```bash
+    git commit -m "commit message" --no-verify
+```
