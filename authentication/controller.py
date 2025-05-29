@@ -13,6 +13,7 @@ from authentication.helper import (
 )
 from utils.mailer import send_email
 from utils.response import failure, success
+from utils.webhook import send_webhook
 
 from .model import User
 
@@ -61,11 +62,22 @@ class AuthController:
         try:
             created_user = user.create()
             created_user.pop("password")
+
+            send_webhook(
+                "user.registered",
+                {
+                    "email": created_user.get("email"),
+                    "role": created_user.get("role"),
+                    "id": created_user.get("_id"),
+                },
+            )
+
             return success(
                 message="User registered successfully",
                 data=created_user,
                 status_code=201,
             )
+
         except ValueError as e:
             return failure(message=str(e), status_code=400)
 

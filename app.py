@@ -32,6 +32,7 @@ app.config["MAIL_USERNAME"] = os.getenv("MAILTRAP_USERNAME")
 app.config["MAIL_PASSWORD"] = os.getenv("MAILTRAP_PASSWORD")
 app.config["MAIL_USE_TLS"] = os.getenv("MAILTRAP_USE_TLS", "True") == "True"
 app.config["MAIL_USE_SSL"] = os.getenv("MAILTRAP_USE_SSL", "False") == "True"
+app.config["WEBHOOK_URL"] = os.getenv("WEBHOOK_URL", "")
 
 app.register_blueprint(auth_bp)
 app.register_blueprint(user_bp)

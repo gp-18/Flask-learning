@@ -11,12 +11,6 @@ repos:
       - id: isort
         args: [--check-only]
 
-  - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.4.8
-    hooks:
-      - id: ruff
-        args: [check, .] 
-
   - repo: https://github.com/pre-commit/pygrep-hooks
     rev: v1.9.0
     hooks:

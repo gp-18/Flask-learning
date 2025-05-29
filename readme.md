@@ -23,8 +23,8 @@ A secure authentication system built with Flask, featuring JWT-based authenticat
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/flask-auth-api.git
-   cd flask-auth-api
+   git clone https://github.com/gp-18/Flask-learning.git
+   cd flask-auth
 
 2. Create and activate a virtual environment:
     ```bash
@@ -80,4 +80,9 @@ TO Test Pre commit config file => (.pre-commit-config-yaml)
 If you want to make a commit without running the pre-commit hooks (bypassing checks), use:
 ```bash
     git commit -m "commit message" --no-verify
+```
+
+To test the weebhook you can get the free webhook url from here 
+```bash 
+    https://webhook.site
 ```
